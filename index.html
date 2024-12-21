@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 </head>
 <body>
     <div class="col">
@@ -131,7 +132,7 @@
             <div class="center">
                 <h3>Заявка на консультацию по внедрению <span class="highlight">RentHub</span> в сфере недвижимости</h3>
             </div>
-            <form action="#" method="post">
+            <form id="contact-form" method="post">
                 <div class="form-group">
                     <input type="text" id="first-name" name="first-name" placeholder="Имя" required>
                 </div>
@@ -178,5 +179,21 @@
     </footer>
 
     </div>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("oyoxr_wEbQ7TU87ry"); // Замените YOUR_USER_ID на ваш ID пользователя EmailJS
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.sendForm('service_d5wcprq', 'template_pa2h942', this)
+                        .then(function() {
+                            alert('Сообщение успешно отправлено!');
+                        }, function(error) {
+                            alert('Произошла ошибка при отправке сообщения: ' + error.text);
+                        });
+                });
+            };
+        })();
+    </script>
 </body>
 </html>

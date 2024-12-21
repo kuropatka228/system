@@ -10,7 +10,7 @@ function addRow() {
     var cell4 = newRow.insertCell(3);
     var cell5 = newRow.insertCell(4);
 
-    cell1.innerHTML = "Однушка в сибири";
+    cell1.innerHTML = "Однушка в сибири";   
     cell2.innerHTML = "2,000,000 ₽";
     cell3.innerHTML = "Новиков Н.Н.";   
     cell4.innerHTML = new Date().toLocaleDateString();
