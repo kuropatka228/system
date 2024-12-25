@@ -1,0 +1,403 @@
+body {
+    padding: 0;
+    margin: 0; 
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    height: 100vh;
+}
+
+.container { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+} 
+
+header { 
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.button-office {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px 0; 
+}
+
+button {
+    background-color: #BDF300; 
+    border: none;
+    border-radius: 100px; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    width: 250px;
+}
+
+@keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0px;
+    }
+    30% {
+      left: 110%;
+      margin-left: 80px;
+    }
+    100% {
+      left: 110%;
+      margin-left: 80px;
+    }
+}
+  
+.button {
+    overflow: hidden;
+    position: relative;
+    color: #565656;
+}
+  
+.button:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 200px;
+    margin-left: 60px;
+    background: #ffffff;
+    
+    opacity: 0.5;
+    position: absolute;
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: all 0.1s;
+    animation-name: slideme;
+    animation-duration: 3s;
+    animation-delay: 0.05s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+h1 {
+    margin: 0; 
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: #3498db; /* Цвет при наведении */
+}
+
+
+h1:first-child {
+    white-space: nowrap; 
+}
+
+
+h2 {
+    margin: 0; 
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.prof{
+    margin-left: 390px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.prof img{
+    padding-right: 30px;
+}
+
+.list{
+    margin-left: 390px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h3{
+    font-size: 28px;
+    color: #517FE2;
+    font-weight: 900;
+    padding-left: 14%;
+
+}
+
+.button-create {
+    overflow: hidden;
+    position: relative;
+    color: #565656;
+    width: 250px;
+    height: 50px;
+    padding-left: 30px;
+    margin-left: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.button-create:hover {
+    transform: scale(1.07);
+    color: #565656; /* Цвет при наведении */
+}
+  
+.list{
+    max-width: 1530px;
+}
+
+.fix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+.search-box {
+    transition: width 2s; /* Анимация ширины */
+    background-color: #BDF300;
+    height: 30px;
+    border-radius: 40px;
+    padding: 10px;
+    position: relative; /* Для позиционирования */
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+}
+
+.search-box:hover .search-txt {
+    width: 240px; /* Ширина при наведении */
+    padding: 0 6px; 
+}
+
+.search-btn {
+    color: #000000;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #BDF300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 11s;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0; /* Изначальная ширина */
+    order: -1; /* Устанавливаем порядок, чтобы текстовое поле было слева */
+}
+
+html {
+    scroll-behavior: smooth; /* Добавляет плавную прокрутку */
+}  
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border-radius: 8px;
+
+
+}
+
+
+table {
+    width: 1130px;
+    border-collapse: separate;
+    margin-top: 20px;
+    border: 3px solid #D2D2D2; /* Граница всей таблицы */
+    border-radius: 8px; /* Закругленные края */
+    overflow: hidden; /* Скрываем края, чтобы они были закруглены */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-weight: 300;
+    
+
+}
+
+thead{
+    background-color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+td{
+    border-bottom: 2px solid #D2D2D2;
+}
+
+.no-bottom-border td {
+    border-bottom: none; /* Убираем нижнюю границу у ячеек этой строки */
+}
+
+td{
+
+    height: 70px;
+}
+
+th {
+    background-color: #FAFAFA;
+    color: #333;
+    
+}
+
+/* Убираем нижнюю границу у всех строк таблицы */
+#realEstateTable tbody tr {
+    border-bottom: none;
+}   
+
+/* Убираем нижнюю границу только у последней строки */
+#realEstateTable tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+#form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 500px;
+}
+
+#realEstateForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#realEstateForm label {
+    margin-bottom: 5px;
+}
+
+#realEstateForm input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+#realEstateForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #BDF300;
+    cursor: pointer;
+}
+
+#realEstateForm button:hover {
+    background-color: #A5E200;
+}
+
+table {
+    width: 1130px;
+    border-collapse: separate;
+    margin-top: 20px;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-weight: 300;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+thead {
+    background-color: #000000;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+td {
+    height: 70px;
+}
+
+td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.edit-btn {
+    background-color: #b9fc02;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    width: 175px;
+}
+
+.edit-btn:hover {
+    background-color: #b9fc02;
+
+}
+
+.delete-btn {
+    background-color: red   ;
+    color: white;
+    width: 175px;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+.redact-container{
+    gap: 15px;
+}
+
+.button-container2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 150px;
+}
